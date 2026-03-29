@@ -397,41 +397,19 @@ export default function HushHabitBuilderPrototype() {
             )}
 
             {activeTab === "insights" && (
-              <div className="grid grid-cols-1 xl:grid-cols-[1fr,0.9fr] gap-6">
-                <Card className="rounded-3xl border-0 shadow-sm bg-white/85">
-                  <CardHeader>
-                    <SectionHeader title="Behavioral insights" subtitle="A few lightweight data-driven prompts" />
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    {insights.map((item, idx) => (
-                      <div key={idx} className="rounded-2xl border p-4 flex gap-3">
-                        <Bell className="h-4 w-4 text-slate-500 mt-1" />
-                        <p className="text-sm text-slate-700 leading-6">{item}</p>
-                      </div>
-                    ))}
-                  </CardContent>
-                </Card>
-
-                <Card className="rounded-3xl border-0 shadow-sm bg-white/85">
-                  <CardHeader>
-                    <SectionHeader title="PM framing" subtitle="How to explain the project in an interview" />
-                  </CardHeader>
-                  <CardContent className="space-y-4 text-sm text-slate-700 leading-6">
-                    <div className="rounded-2xl bg-slate-50 p-4">
-                      <p className="font-medium text-slate-900">Problem</p>
-                      <p className="mt-2">Users may set up investing once, but long-term value depends on consistent recurring deposits.</p>
+              <Card className="rounded-3xl border-0 shadow-sm bg-white/85">
+                <CardHeader>
+                  <SectionHeader title="Progress insights" subtitle="A few lightweight, user-friendly prompts" />
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  {insights.map((item, idx) => (
+                    <div key={idx} className="rounded-2xl border p-4 flex gap-3">
+                      <Bell className="h-4 w-4 text-slate-500 mt-1" />
+                      <p className="text-sm text-slate-700 leading-6">{item}</p>
                     </div>
-                    <div className="rounded-2xl bg-slate-50 p-4">
-                      <p className="font-medium text-slate-900">Idea</p>
-                      <p className="mt-2">Use streaks, milestones, and recovery flows to improve deposit consistency without making the app feel gimmicky.</p>
-                    </div>
-                    <div className="rounded-2xl bg-slate-50 p-4">
-                      <p className="font-medium text-slate-900">Success metrics</p>
-                      <p className="mt-2">Recurring deposit retention, streak continuation rate, missed-deposit recovery rate, and 30/90-day engagement.</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  ))}
+                </CardContent>
+              </Card>
             )}
           </motion.div>
         </div>
