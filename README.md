@@ -1,19 +1,26 @@
-# React + TypeScript + Vite
+# Hush Habit Builder Prototype
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React prototype exploring how Hush could expand its "days on mission" concept into a more structured habit system to improve long-term investing consistency.
 
-Currently, two official plugins are available:
+## Overview
+This project focuses on reinforcing recurring deposits through:
+- streak tracking
+- milestone feedback
+- goal progress visualization
+- missed deposit recovery
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Goal
+The objective is not to gamify investing, but to make progress more visible and encourage consistent behavior over time.
 
-## React Compiler
+## Live Demo
+https://hush-habit-builder.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
+- React
+- TypeScript
+- Tailwind
+- shadcn/ui
+- Vercel
 
 ```js
 export default defineConfig([
