@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import {
   Home,
@@ -12,8 +12,9 @@ import {
   CircleDollarSign,
   RefreshCcw,
   CheckCircle2,
+  type LucideIcon,
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
@@ -49,9 +50,22 @@ const navItems = [
   { key: "insights", label: "Insights", icon: Bell },
 ];
 
-function StatCard({ title, value, subtitle, icon: Icon }) {
+type StatCardProps = {
+  title: string;
+  value: string;
+  subtitle: string;
+  icon: LucideIcon;
+};
+
+type SectionHeaderProps = {
+  title: string;
+  subtitle: string;
+  action?: ReactNode;
+};
+
+function StatCard({ title, value, subtitle, icon: Icon }: StatCardProps) {
   return (
-    <Card className="rounded-2xl shadow-sm border-0 bg-white/80 backdrop-blur">
+    <Card className="rounded-2xl border-0 bg-white/80 shadow-sm backdrop-blur">
       <CardContent className="p-5">
         <div className="flex items-start justify-between">
           <div>
@@ -68,12 +82,12 @@ function StatCard({ title, value, subtitle, icon: Icon }) {
   );
 }
 
-function SectionHeader({ title, subtitle, action }) {
+function SectionHeader({ title, subtitle, action }: SectionHeaderProps) {
   return (
     <div className="flex items-end justify-between gap-4">
       <div>
         <h2 className="text-xl font-semibold text-slate-900">{title}</h2>
-        <p className="text-sm text-slate-500 mt-1">{subtitle}</p>
+        <p className="mt-1 text-sm text-slate-500">{subtitle}</p>
       </div>
       {action}
     </div>
