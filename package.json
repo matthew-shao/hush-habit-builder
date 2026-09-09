@@ -1,0 +1,32 @@
+{
+  "name": "hush-goals",
+  "version": "1.0.0",
+  "description": "A goal-setting feature mockup for the Hush investment app, built in React Native / Expo during a 6-week internship.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthew-shao/hush-habit-builder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/matthew-shao/hush-habit-builder/issues"
+  },
+  "homepage": "https://github.com/matthew-shao/hush-habit-builder#readme",
+  "dependencies": {
+    "@expo/webpack-config": "^19.0.1",
+    "@react-navigation/native": "^7.3.18",
+    "@react-navigation/stack": "^7.10.24",
+    "expo": "^57.0.21",
+    "react-dom": "^19.3.0",
+    "react-native": "^0.86.3",
+    "react-native-safe-area-context": "^5.9.1",
+    "react-native-screens": "^4.27.0",
+    "react-native-web": "^0.21.2"
+  }
+}
